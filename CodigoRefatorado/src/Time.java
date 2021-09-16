@@ -1,3 +1,8 @@
+/**
+TRABALHO POO
+Daniel Prazeres e Natan Lemes
+Sistemas de Informação
+**/
 public class Time {
 
     //atributos
