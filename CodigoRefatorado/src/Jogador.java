@@ -1,3 +1,8 @@
+/**
+TRABALHO POO
+Daniel Prazeres e Natan Lemes
+Sistemas de Informação
+**/
 import java.util.ArrayList;
 public class Jogador {
 
