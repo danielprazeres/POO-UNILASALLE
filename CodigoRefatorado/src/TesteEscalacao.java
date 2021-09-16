@@ -1,39 +1,38 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class TesteEscalacao {
     public static void main(String[] args){
 
+    var entrada = new Scanner(System.in);
+
+
     Time time = new Time();
-    time.setTimeNome("Flamengo");
+    System.out.print("Nome do time: ");
+    time.setTimeNome(entrada.next());
     
-    Jogador jog1 = new Jogador();  
-    jog1.setNomeJog("Osvaldo");
-    jog1.setSobreNome("Ruan Moreira");
-    jog1.setIdadeJogador(25);
-    jog1.setTime(Time.getNome());
+    ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
+    for(int i=0; i<5;i++)
+    {
+        Jogador jogadorRodada = new Jogador();
 
-    Jogador jog2 = new Jogador(); 
-    jog2.setNomeJog("Mario");
-    jog2.setSobreNome("Valente");
-    jog2.setIdadeJogador(25);
-    jog2.setTime(Time.getNome());
+        System.out.print("Nome do jogador: ");
+        jogadorRodada.setNomeJog(entrada.next());
+        System.out.print("Sobrenome do Jogador: ");
+        jogadorRodada.setSobreNome(entrada.next());
+        System.out.print("Idade: ");
+        jogadorRodada.setIdadeJogador(entrada.nextInt());
+        jogadorRodada.setTime(Time.getNome());
+        System.out.println("----------------------------------- \n");
 
-    Jogador jog3 = new Jogador(); 
-    jog3.setNomeJog("Marcos");
-    jog3.setSobreNome("Ferreira");
-    jog3.setIdadeJogador(25);
-    jog3.setTime(Time.getNome());
+        jogadores.add(jogadorRodada);
+    }
+    
 
-    Jogador jog4 = new Jogador();  
-    jog4.setNomeJog("Fabio");
-    jog4.setSobreNome("Jesus");
-    jog4.setIdadeJogador(23);
-    jog4.setTime(Time.getNome());
-
-    Jogador jog5 = new Jogador();  
-    jog5.setNomeJog("Jorge");
-    jog5.setSobreNome("Vieira");
-    jog5.setIdadeJogador(26);
-    jog5.setTime(Time.getNome());
-
-    Escalacao.imprimirEscalacao();
+    Escalacao jogo = new Escalacao();
+    System.out.print("Data que vai acontecer o jogo: ");
+    jogo.definirData(entrada.next());
+    jogo.definirEscalacao(time, jogadores, jogo.getData());
+    
 }
 }

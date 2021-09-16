@@ -43,7 +43,7 @@ public class Jogador {
             ListaJogadores.add(nomejog);
         }
         else{
-            System.out.println("O numero de jogadores desse time chegou ao máximo!!! ");
+            System.out.println("O numero de jogadores desse time chegou ao mï¿½ximo!!! ");
         }
     }
     public void setTime(String time){
