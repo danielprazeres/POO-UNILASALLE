@@ -34,5 +34,6 @@ public class TesteEscalacao {
     jogo.definirData(entrada.next());
     jogo.definirEscalacao(time, jogadores, jogo.getData());
     
+   entrada.exit();
 }
 }
